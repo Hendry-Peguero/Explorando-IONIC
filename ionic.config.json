@@ -1,0 +1,7 @@
+{
+  "name": "mi-app-sidemenu",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
