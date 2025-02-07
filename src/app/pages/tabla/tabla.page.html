@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tabla de Multiplicar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="form" (ngSubmit)="generarTabla()">
+    <ion-item>
+      <ion-label position="stacked">Número</ion-label>
+      <ion-input type="number" formControlName="numero"></ion-input>
+    </ion-item>
+    <ion-button expand="block" type="submit">Generar Tabla</ion-button>
+  </form>
+  <ion-list *ngIf="tabla.length > 0">
+    <ion-item *ngFor="let item of tabla">
+      {{ item }}
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sumadora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="form" (ngSubmit)="sumar()">
+    <ion-item>
+      <ion-label position="stacked">Primer número</ion-label>
+      <ion-input type="number" formControlName="numero1"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Segundo número</ion-label>
+      <ion-input type="number" formControlName="numero2"></ion-input>
+    </ion-item>
+    <ion-button expand="block" type="submit">Sumar</ion-button>
+  </form>
+  <div *ngIf="resultado !== null" class="ion-text-center">
+    <h2>Resultado: {{ resultado }}</h2>
+  </div>
+</ion-content>

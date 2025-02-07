@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Traductor de Números a Letras</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="form" (ngSubmit)="traducir()">
+    <ion-item>
+      <ion-label position="stacked">Número (1-1000)</ion-label>
+      <ion-input type="number" formControlName="numero"></ion-input>
+    </ion-item>
+    <ion-button expand="block" type="submit">Traducir</ion-button>
+  </form>
+  <div *ngIf="texto" class="ion-text-center">
+    <h2>{{ texto }}</h2>
+  </div>
+</ion-content>
